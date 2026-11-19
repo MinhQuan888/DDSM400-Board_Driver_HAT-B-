@@ -1,0 +1,16 @@
+menu "DDSM400 motor UART"
+config DDSM_TX
+    int "ESP32 motor UART TX GPIO"
+    range 0 33
+    default 19
+    help
+        Waveshare DDSM Driver HAT (B) schematic routes GPIO19 to Bus_TXD.
+        Change only if using a different board revision or custom wiring.
+config DDSM_RX
+    int "ESP32 motor UART RX GPIO"
+    range 0 39
+    default 18
+    help
+        Waveshare DDSM Driver HAT (B) schematic routes Bus_RXD to GPIO18.
+        Change only if using a different board revision or custom wiring.
+endmenu
